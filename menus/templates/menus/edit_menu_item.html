@@ -1,0 +1,23 @@
+{% extends "menus/application.html" %}
+
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    <fieldset>
+        <label for="category">Category:</label>
+        <input type="text" name="category" value="{{ menu_item.category }}"></input>
+
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="{{ menu_item.name }}"></input>
+
+        <label for="description">Description:</label>
+        <input type="text" name="description" value="{{ menu_item.description }}"></input>
+
+        <label for="price">Price:</label>
+        <input type="text" name="price" value="{{ menu_item.price }}"></input>
+
+        <input type="submit" value="Submit" />
+
+    </fieldset>
+</form>
+{% endblock content %}
