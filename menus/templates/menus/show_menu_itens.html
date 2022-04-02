@@ -1,6 +1,8 @@
-{% extends "menus/application.html" %}
+{% extends "application.html" %}
 
 {% block content %}
+    <h1>Itens do Menu</h1>
+    <a href="{{ restaurant_id }}/new/">Incluir</a>
     {% if menu_itens %}
         {% for menu_item in menu_itens %}
             <p>{{ menu_item.restaurant.name }}</p>
@@ -13,6 +15,6 @@
             </p>
         {% endfor %}
     {% else %}
-        <p>No menu itens.</p>
+        <p>Nenhum item no menu, por favor inclua um.</p>
     {% endif %}
 {% endblock content %}

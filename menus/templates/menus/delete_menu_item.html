@@ -1,7 +1,8 @@
-{% extends "menus/application.html" %}
+{% extends "application.html" %}
 
 {% block content %}
 <form action="" method="post">
+    <h1>Remove Item {{ menu_item.id }} do Menu </h1>
     {% csrf_token %}
     <fieldset>
         <label for="category">Category:</label>
