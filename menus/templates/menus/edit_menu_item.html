@@ -1,6 +1,7 @@
 {% extends "application.html" %}
 
 {% block content %}
+<h1>Edit Item {{ menu_item.id }} do Menu </h1>
 <form action="" method="post">
     {% csrf_token %}
     <fieldset>
@@ -16,7 +17,7 @@
         <label for="price">Price:</label>
         <input type="text" name="price" value="{{ menu_item.price }}"></input>
 
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Confirmar" /> | <a href="/">Cancelar</a>
 
     </fieldset>
 </form>

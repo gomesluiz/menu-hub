@@ -13,7 +13,7 @@
         <input type="text" name="description" value="{{ menu_item.description }}"></input>
         <label for="price">Price:</label>
         <input type="text" name="price" value="{{ menu_item.price }}"></input>
-        <input type="submit" value="Delete" />
+        <input type="submit" value="Confirmar" /> | <a href="/menus/{{ menu_item.restaurant_id }}">Cancelar</a>
     </fieldset>
 </form>
 {% endblock content %}
