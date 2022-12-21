@@ -4,21 +4,27 @@
 <h1>Edit Item {{ menu_item.id }} do Menu </h1>
 <form action="" method="post">
     {% csrf_token %}
-    <fieldset>
-        <label for="category">Category:</label>
-        <input type="text" name="category" value="{{ menu_item.category }}"></input>
-
-        <label for="name">Name:</label>
-        <input type="text" name="name" value="{{ menu_item.name }}"></input>
-
-        <label for="description">Description:</label>
-        <input type="text" name="description" value="{{ menu_item.description }}"></input>
-
-        <label for="price">Price:</label>
-        <input type="text" name="price" value="{{ menu_item.price }}"></input>
-
-        <input type="submit" value="Confirmar" /> | <a href="/">Cancelar</a>
-
-    </fieldset>
+    <h1>Remove Item {{ menu_item.id }} do Menu </h1>
+    {% csrf_token %}
+    <div class="form-group mb-3">
+        <label for="category" class="form-label">Category:</label>
+        <input type="text" name="category" value="{{ menu_item.category }}" class="form-control" />
+    </div>
+    <div class="form-group mb-3">
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" name="name" value="{{ menu_item.name }}" class="form-control" />
+    </div>
+    <div class="form-group mb-3">
+        <label for="description" class="form-label">Description:</label>
+        <input type="text" name="description" value="{{ menu_item.description }}" class="form-control" />
+    </div>
+    <div class="form-group mb-3">
+        <label for="price" class="form-label">Price:</label>
+        <input type="text" name="price" value="{{ menu_item.price }}" class="form-control" />
+    </div>
+    <div class="form-group mb-3">
+        <button type="submit" class="btn btn-primary">Confirmar</button> 
+        <a href="/" class="btn btn-secondary">Cancelar</a>
+    </div>
 </form>
 {% endblock content %}
