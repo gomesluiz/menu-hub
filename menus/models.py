@@ -4,7 +4,6 @@ from django.db import models
 
 # Create your models here.
 
-
 class Restaurant(models.Model):
     """Um objeto da classse Restaurant armazena informaçoes sobre um 
        restaurante."""

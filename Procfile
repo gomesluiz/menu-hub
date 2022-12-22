@@ -1,0 +1,1 @@
+web:gunicorn menuhub.wsgi --log-file -
