@@ -1,1 +1,1 @@
-web: gunicorn menuhub.wsgi --log-file -
+web: gunicorn django_porject.wsgi --log-file -
